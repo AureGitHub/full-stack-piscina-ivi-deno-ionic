@@ -69,7 +69,17 @@ onLoadDataEmiter($event: any) {
     this.getTableRefresh();
   }
 
+  toFormData(formValue : any){
+    const formData = new FormData();
+    for ( const key of Object.keys(formValue) ) {
+      const value = formValue[key];
+      formData.append(key, value);
+    }
 
+    return formData;
+
+
+  }
 
 
   async actionEmiter(event: any) {
@@ -82,7 +92,9 @@ onLoadDataEmiter($event: any) {
 
       event.row['disponible'] =  !event.row['disponible'];
 
-      let objHttp: classHttp = new classHttp('put','CartaOpcion' ,null, '',event.row,event.row['id'] );          
+      const formData = this.toFormData(event.row);
+
+      let objHttp: classHttp = new classHttp('put','CartaOpcion' ,null, '',formData,event.row['id'] );          
       await this.myHttpService.ejecuteURL(objHttp);
       this.getTableRefresh();
 
