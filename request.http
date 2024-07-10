@@ -1,0 +1,204 @@
+http://localhost:3000/api/healthchecker
+###
+POST http://localhost:3000/api/general/users/
+content-type: application/json
+
+    {
+        "user" : {
+            "email" : "juan@a.es",
+            "name": "juan",            
+            "password" : "12345678"    
+
+        },
+        "app": {
+            "appId" : 1
+
+        }
+    }
+    
+
+###
+
+POST http://localhost:3000/api/general/auth/login
+content-type: application/json
+
+{
+    "email" : "auredeveloper@gmail.com",   
+    "password" : "jas11jas11" ,
+    "appId" : 1
+}
+
+
+
+###
+
+POST http://localhost:3000/api/gestion-casa/servicios/
+content-type: application/json
+
+{
+  "fecha" : "2023-06-15T12:45:00.000Z",
+  "horaInicio" : "2020-12-23T10:00:00.000Z",
+  "horaFin" : "2020-12-23T11:01:00.000Z",
+  "suplLevantar" : false,
+  "empleadaId" : 1,
+  "pagado": false
+
+}
+
+###
+
+
+GET http://localhost:3000/api/gestion-casa/servicios/getPresent?pagado=t
+Authorization :eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRGlvcyAxIiwicm9sZSI6IkdPRCIsImVzdGFkbyI6IkFDVElWRSIsImFwcHMiOltdLCJhcHAiOiJnZXN0aW9uLWNhc2EiLCJhcHBJZCI6MSwiaXNBZG1pbiI6dHJ1ZSwiaXNHb2QiOnRydWV9LCJhY2Nlc3NUb2tlbkV4cGlyZXNJbiI6MTY4NjkyNTI1OTc3N30.m7sDCZ6zfeFbRiD15P7AkL8yDcLxlsDmUo5ZqLPSxtxk8eDliXpT-CaglCq5uM5X5aKA8_miW3cZ__80RtFiog
+
+###
+
+PUT http://localhost:3000/api/gestion-casa/servicios/3
+Authorization :eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRGlvcyAxIiwicm9sZSI6IkdPRCIsImVzdGFkbyI6IkFDVElWRSIsImFwcHMiOltdLCJhcHAiOiJnZXN0aW9uLWNhc2EiLCJhcHBJZCI6MSwiaXNBZG1pbiI6dHJ1ZSwiaXNHb2QiOnRydWV9LCJhY2Nlc3NUb2tlbkV4cGlyZXNJbiI6MTY4NjgwOTUyNDQ1M30.TVPwSH1LrsDsYiHT1vjzOMjONVXev7sXhB4-lBL39aLUC5Zw92S35RuGGV7U3ssYfzTbW6M_I8QsrHwDbAtwRA
+content-type: application/json
+
+{
+  "horaFin" : "2020-12-23T12:30:00.000Z"
+}
+
+###
+
+POST http://localhost:3000/api/casa/1
+Authorization :eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRGlvcyAxIiwicm9sZSI6IkdPRCIsImVzdGFkbyI6IkFDVElWRSIsImFwcHMiOltdLCJzb21lQXBwIjpmYWxzZSwiYXBwIjoiZ2VzdGlvbi1jYXNhIiwiYXBwSWQiOjEsImlzQWRtaW4iOnRydWUsImlzR29kIjp0cnVlfSwiYWNjZXNzVG9rZW5FeHBpcmVzSW4iOjE2ODYzMjU5OTU2NDR9.I7nEluKvhFtb55GRZpvgEQo1lsWvm9j0qday-dFGLh_n9Bq_gjBKMAWfStu9-zanG5r4qWym6XkNB4PmHN6VgA
+content-type: application/json
+
+{
+    
+    "nombre": "Zarza la mayor",
+    "baja": true
+    
+}
+
+###
+
+PUT http://localhost:3000/api/casa/1
+Authorization :eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRGlvcyAxIiwicm9sZSI6IkdPRCIsImVzdGFkbyI6IkFDVElWRSIsImFwcHMiOltdLCJzb21lQXBwIjpmYWxzZSwiYXBwIjoiZ2VzdGlvbi1jYXNhIiwiYXBwSWQiOjEsImlzQWRtaW4iOnRydWUsImlzR29kIjp0cnVlfSwiYWNjZXNzVG9rZW5FeHBpcmVzSW4iOjE2ODYzMjU5OTU2NDR9.I7nEluKvhFtb55GRZpvgEQo1lsWvm9j0qday-dFGLh_n9Bq_gjBKMAWfStu9-zanG5r4qWym6XkNB4PmHN6VgA
+content-type: application/json
+
+{
+    
+    "nombre": "Zarza la mayor",
+    "baja": false
+    
+}
+
+
+###
+
+GET http://localhost:3000/api/vallegrande/categoria/1
+
+###
+POST http://localhost:3000/api/vallegrande/categoria
+content-type: application/json
+
+ {
+    
+     "id": 2,
+     "descripcion": "bocadillos1"
+    
+ }
+
+###
+
+DELETE http://localhost:3000/api/vallegrande/categoria/2
+
+
+###
+
+PUT http://localhost:3000/api/vallegrande/categoria/1
+content-type: application/json
+
+ {
+    
+     "descripcion": "bocadillos"
+    
+ }
+
+###
+POST https://aure-deno-aok-prisma.deno.dev/api/auth/login 
+content-type: application/json
+
+{
+    "email" : "ago11d@a.es",   
+    "password" : "12345678"    
+}
+
+
+###
+http://localhost:3000/api/auth/refresh
+
+###
+http://localhost:3000/api/users/me
+Authorization : eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiRGlvcyIsInJvbGUiOiJHT0QifSwiYWNjZXNzVG9rZW5FeHBpcmVzSW4iOjE2ODUwODQ4NDExNDN9.ZJiOlRChRMClxknz675-ZfrmkkYkKjWaG2K52y6LglFF044VE9gSfIY0jYKDo97tS6pxni0r1QBjF1fC_qnaew
+
+###
+http://localhost:3000/api/auth/logout
+Authorization : eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiRGlvcyIsInJvbGUiOiJHT0QifSwiYWNjZXNzVG9rZW5FeHBpcmVzSW4iOjE2ODUwNDcwNTM2NzF9.Q5lB2N1SP2s8kue0c2fzxYv-RY14ZFo85OFYGIATmIAWkzt-OjdlE8yIbRBnKiOtMf5Zus-6BZSYjaCW9JmzHA
+
+###
+PUT http://localhost:300/60/api/users
+content-type: application/json
+
+{ 
+    "estado" : "ACTIVE"    
+}
+
+
+###
+DELETE http://localhost:3000/api/users/5
+
+###
+GET http://localhost:3000/api/users/6
+Authorization : eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiRGlvcyIsInJvbGUiOiJHT0QifSwiYWNjZXNzVG9rZW5FeHBpcmVzSW4iOjE2ODUwODU3Njk4MjJ9.SQR8xZr5LGUMkZoBtsF-30YdLIW9zYcIE-AbYHggt_tNR4sEPXu-QzrWbV4szBH46V2aUZJ97biOuAXPBFHfnQ
+
+###
+GET http://localhost:3000/public/sample.txt
+
+###
+GET  http://localhost:3000/api/ttec-euromillones/entities/Apuesta
+
+###
+
+POST http://localhost:3000/api/ttec-euromillones/user/login 
+content-type: application/json
+
+{
+    "email" : "aure.desande@gmail.com",   
+    "password" : "jas11jas11"    
+}
+
+###
+
+GET http://localhost:3000/api/ttec-euromillones/user/5
+
+
+
+###
+
+POST http://localhost:3000/api/ttec-euromillones/user/getCodeResetPass 
+content-type: application/json
+
+{
+    "email" : "aure.desande@gmail.com"
+}
+
+
+###
+
+POST http://localhost:3000/api/ttec-euromillones/user/reserPassByCode 
+content-type: application/json
+
+{
+    "code" : "64ce4417-f26d-42ac-ad0a-35d84247d544",
+    "password" : "jas11jas11"
+}
+
+###
+GET  http://localhost:3000/api/ttec-euromillones/userxbizum
+
+

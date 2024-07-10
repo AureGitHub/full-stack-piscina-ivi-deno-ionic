@@ -1,0 +1,20 @@
+
+{
+
+    "demo": {
+      "greetings": "Hola!",
+      "en": "Anglaise",
+      "fr": "Français"
+    },
+  
+    "primeng": {
+      "dayNames": [ "Domingo", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+      "dayNamesShort": [ "Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sáb" ],
+      "dayNamesMin": [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+      "monthNames": [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+      "monthNamesShort": [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dec" ],
+      "today": "Hoy",
+      "firstDayOfWeek" : 1,
+      "clear" : "Cerrar"
+    }
+    }

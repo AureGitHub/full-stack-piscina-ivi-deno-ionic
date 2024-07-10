@@ -1,0 +1,83 @@
+.fondo{
+  background-color: black;
+}
+
+
+@media(min-width: 968px) {
+
+  .mobile-header {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    background: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  ion-router-outlet {
+    margin-top: 63px;
+    width: 80%;
+
+  }
+
+  .pagina{
+    // border: solid 0.5px rgb(15, 14, 14);
+    // padding: 10px;
+    // background-color: rgb(235, 232, 232);
+    padding-left: 30%;
+    padding-right: 30%;    
+    padding-top: 1%;    
+  
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .screen {
+    display: none;
+  }
+
+  ion-grid {
+
+    // --ion-grid-width-xs: 50%;
+    // --ion-grid-width-sm: 288px;
+    // --ion-grid-width-md: 384px;
+    // --ion-grid-width-lg: 480px;
+    --ion-grid-width-xl: 60%;
+  }
+}
+
+// Para el movil
+@media(max-width: 768px) {
+    
+  .mobile-header {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .screen {
+    display: block;
+  }
+}
+
+
+
+
+.active-item {
+  border-bottom: 2px solid var(--ion-color-primary);
+}
+
+
+
+
+

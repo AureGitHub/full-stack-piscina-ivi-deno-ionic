@@ -1,0 +1,22 @@
+<!-- {{columns | json}} -->
+<!-- { class : 'indexPar',  condicion : 'index % 2 == 0'}, -->
+
+<ion-grid class="router-outlet"> 
+  <ion-row>
+    <ion-col>
+      <my-table
+      [loadOnInit]="false"
+        [canAddEntity] ="user.isAdmin"
+        [canUpdateEntity] ="user.isAdmin"
+        [title]="'Categorías'"
+        [entityName]="entityName"
+        [columns]="columns"
+        [refresh]="tableRefresh"
+        (actionEmiter)="actionEmiter($event)"
+        (onLoadDataEmiter)="onLoadDataEmiter($event)"
+      ></my-table>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+

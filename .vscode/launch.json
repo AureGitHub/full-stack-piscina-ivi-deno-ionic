@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "name": "Launch Program",
+            "type": "node",
+            "program": "${workspaceFolder}/server.ts",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "C:\\Users\\aured\\.deno\\bin\\deno.exe",
+            "runtimeArgs": [
+                "run",
+                "--inspect-wait",
+                "--allow-all",
+                "--allow-env",
+            ],
+            "attachSimplePort": 9229
+        }
+    ]
+}
+
+
+// netstat -ano | findstr :3000   taskkill /PID 3000 /F

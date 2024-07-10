@@ -1,0 +1,59 @@
+<ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+  <ion-refresher-content></ion-refresher-content>
+</ion-refresher>
+
+<div class="espacio"></div> 
+ <div  class="fondo-carta">
+  <ion-grid>
+    <ion-row *ngIf="isloading">
+      <ion-col >
+        <div   class="cargando">
+          <ion-spinner></ion-spinner> Cargando... 
+          <!-- <img src="assets/img_esperando.jpg" alt="your image">    -->
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>      
+      <ion-col>        
+        <div *ngIf="!isloading && (!lstcartaCategoria || lstcartaCategoria.length<=0)" class="fondo">
+          No hay carta
+        </div>
+        <div *ngIf="!isloading && lstcartaCategoria && lstcartaCategoria.length>0" class="fondo">
+          <div class="opcion" *ngFor="let itemCategoria of lstcartaCategoria;">
+
+            <div class="option-cabecera" (click)=" itemCategoria.lstOpcion && changeState(itemCategoria)">
+              <div style="width: 80%" [style.font-size]="itemCategoria.state== 'open' ? '25px' :  '20px'" class="cabecera-title">{{itemCategoria.titulo}}</div>
+              <div class="cabecera-icon">
+                <ion-icon *ngIf="itemCategoria?.state == 'closed' && itemCategoria.lstOpcion"  name="chevron-down-outline"></ion-icon>
+                <ion-icon *ngIf="itemCategoria?.state == 'open'" name="chevron-up-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="option-detalle" *ngIf="itemCategoria.state == 'open'">
+
+              <div class="item-menu" *ngFor="let item of itemCategoria.lstOpcion; let i = index">
+                <ion-grid [fixed]="true">
+                  <ion-row>
+                    <ion-col size="9">
+                      {{item.titulo}}
+                    </ion-col>
+                    <ion-col size="3" class="precio" style="text-align: right;">
+                      {{item.precio | number : '1.2-2'}} €
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row *ngIf="item.descripcion">
+                    <ion-col size="12" class="descripcion">
+                      {{item.descripcion}}
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

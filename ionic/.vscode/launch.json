@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Serve to the browser (Ionic Serve)",
+            "type": "cordova",
+            "request": "launch",
+            "platform": "serve",
+            "target": "chrome",
+            "cwd": "${workspaceFolder}",
+            "devServerAddress": "192.168.1.72",
+            "sourceMaps": true,
+            "url": "https://localhost:4200",
+            "ionicLiveReload": true,
+            
+        }
+    ]
+}

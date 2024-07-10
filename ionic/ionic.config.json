@@ -1,0 +1,7 @@
+{
+  "name": "ionic-ttec-euromillones",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
